@@ -10,8 +10,8 @@ function openModal() {
   /* Set onclick event handler for all trigger elements */
   for (var i = 0; i < modalTrigger.length; i++) {
     modalTrigger[i].onclick = function () {
-      var target = this.getAttribute('href').slice(1);
-      var modalWindow = document.getElementById(target);
+      // var target = this.getAttribute('href').slice(1);
+      var modalWindow = document.getElementById('jsModal');
 
       modalWindow.classList ? modalWindow.classList.add('mopen') : modalWindow.className += ' ' + 'mopen';
     }
@@ -53,8 +53,8 @@ function ready(fn) {
 }
 
 /* Triggering modal window function after dom ready */
-ready(openModal);
-ready(closeModal);
+// ready(openModal);
+// ready(closeModal);
 
 var labels = document.getElementsByTagName('LABEL');
 
