@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             if (checked) {
                 // shipping custom help
                 var fieldtitle = 'Shipping';
-                var infotext = 'See our useful shipping your stuff guide <a id="ship-pop"  class="jsModalTrigger" href="jsModal">here</a>'
+                var infotext = 'See our useful shipping your stuff guide <a id="ship-pop"  class="jsModalTrigger" href="#jsModal">here</a>'
                 var labels = document.getElementsByTagName('LABEL');
                 for (var i = 0; i < labels.length; i++) {
                     if (labels[i].textContent == fieldtitle) {
