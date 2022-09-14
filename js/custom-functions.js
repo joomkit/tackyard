@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         let fieldtitle = 'Location';
         let infotext = 'Add your postcode or town to show buyers where you are.';
         let labels = document.getElementsByTagName('LABEL');
-        console.log(labels[8].textContent);
+       
         console.log(labels);
         if(labels){
           for ( var i = 0; i < labels.length; i++) {
