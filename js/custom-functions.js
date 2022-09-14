@@ -13,7 +13,7 @@ function openModal() {
       var target = this.getAttribute('href').substr(1);
       var modalWindow = document.getElementById(target);
 
-      modalWindow.classList ? modalWindow.classList.add('open') : modalWindow.className += ' ' + 'open';
+      modalWindow.classList ? modalWindow.classList.add('mopen') : modalWindow.className += ' ' + 'mopen';
     }
   }
 }
@@ -28,7 +28,7 @@ function closeModal() {
     closeButton[i].onclick = function () {
       var modalWindow = this.parentNode.parentNode;
 
-      modalWindow.classList ? modalWindow.classList.remove('open') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      modalWindow.classList ? modalWindow.classList.remove('mopen') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'mopen'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
 
@@ -37,7 +37,7 @@ function closeModal() {
     closeOverlay[i].onclick = function () {
       var modalWindow = this.parentNode;
 
-      modalWindow.classList ? modalWindow.classList.remove('open') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      modalWindow.classList ? modalWindow.classList.remove('mopen') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'mopen'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
 
