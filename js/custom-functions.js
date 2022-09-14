@@ -1,7 +1,7 @@
 
 // modal
 /* This script supports IE9+ */
-(function() {
+
   /* Opening modal window function */
   function openModal() {
       /* Get trigger element */
@@ -55,7 +55,7 @@
   /* Triggering modal window function after dom ready */
   ready(openModal);
   ready(closeModal);
-}());
+
 
 // shipping info text
 document.addEventListener('DOMContentLoaded', function (event) {
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
                         labels[i].insertAdjacentHTML('afterend', '<div id="ship-help" class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
                     }
                 }
-                ready(openModal);
-                ready(closeModal);
+                openModal();
+                closeModal();
             } else {
                 let node = document.getElementById("ship-help");
                 if (node.parentNode) {
