@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     console.log(found);
 
     if (found !== null && found[0] === find) {
-        console.log("update location text info");
+        console.log("update location text info gh");
         let fieldtitle = 'Location';
         let infotext = 'Add your postcode or town to show buyers where you are.';
         let alllabels = document.getElementsByTagName('LABEL');
