@@ -124,18 +124,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let url = window.location.href;
     let find = 'new';
     let found = url.match(find);
-
+    let i;
     console.log(found);
 
     if (found !== null && found[0] === find) {
         console.log("update location text info");
         let fieldtitle = 'Location';
         let infotext = 'Add your postcode or town to show buyers where you are.';
-        let alllabels = document.getElementsByTagName('LABEL');
-        for (var i = 0; i < alllabels.length; i++) {
+        let labels = document.getElementsByTagName('LABEL');
+        console.log(labels)[9].textContent;
+        console.log(labels);
+        for ( i = 0; i < labels.length; i++) {
             console.log('label-loop');
-            if (alllabels[i].textContent == fieldtitle) {
-                alllabels[i].insertAdjacentHTML('afterend', '<div class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
+            if (labels[i].textContent == fieldtitle) {
+                labels[i].insertAdjacentHTML('afterend', '<div class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
             }
         }
     }
