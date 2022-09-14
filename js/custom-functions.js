@@ -67,13 +67,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // But only alert for elements that have an alert-button class
     if (e.target.classList.contains('delivery-method-checkbox')) {
 
+      var labels = document.getElementsByTagName('LABEL');
       const checked = document.querySelector('#shipping-checkbox:checked') !== null;
       console.log(checked); // false
       if (checked) {
         // shipping custom help
         var fieldtitle = 'Shipping';
         var infotext = 'See our useful shipping your stuff guide <a id="ship-pop"  class="jsModalTrigger" href="#jsModal">here</a>'
-        var labels = document.getElementsByTagName('LABEL');
+        
         for (var i = 0; i < labels.length; i++) {
           if (labels[i].textContent == fieldtitle) {
             labels[i].insertAdjacentHTML('afterend', '<div id="ship-help" class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
@@ -88,15 +89,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
       }
       //do location off this handler
-      let fieldtitle = 'Location';
-      let infotext = 'Add your postcode or town to show buyers where you are.';
-      let labels = document.getElementsByTagName('LABEL');
+      let LocFieldtitle = 'Location';
+      let infotextLoc = 'Add your postcode or town to show buyers where you are.';
 
       if (labels) {
         for (var i = 0; i < labels.length; i++) {
           console.log('label-loop');
-          if (labels[i].textContent == fieldtitle) {
-            labels[i].insertAdjacentHTML('afterend', '<div class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
+          if (labels[i].textContent == LocFieldtitle) {
+            labels[i].insertAdjacentHTML('afterend', '<div class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotextLoc + '</p></div></div>');
           }
         }
       }
