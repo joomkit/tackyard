@@ -10,7 +10,7 @@ function openModal() {
   /* Set onclick event handler for all trigger elements */
   for (var i = 0; i < modalTrigger.length; i++) {
     modalTrigger[i].onclick = function () {
-      var target = this.getAttribute('href').substr(1);
+      var target = this.getAttribute('href').slice(1);
       var modalWindow = document.getElementById(target);
 
       modalWindow.classList ? modalWindow.classList.add('mopen') : modalWindow.className += ' ' + 'mopen';
