@@ -1,60 +1,23 @@
 
 // modal
-/* This script supports IE9+ */
+var modal = document.querySelector(".modal");
+var trigger = document.querySelector(".trigger");
+var closeButton = document.querySelector(".close-button");
 
-/* Opening modal window function */
-function openModal() {
-  /* Get trigger element */
-  var modalTrigger = document.getElementsByClassName('jsModalTrigger');
-
-  /* Set onclick event handler for all trigger elements */
-  for (var i = 0; i < modalTrigger.length; i++) {
-    modalTrigger[i].onclick = function () {
-      // var target = this.getAttribute('href').slice(1);
-      var modalWindow = document.getElementById('jsModal');
-
-      modalWindow.classList ? modalWindow.classList.add('mopen') : modalWindow.className += ' ' + 'mopen';
-    }
-  }
+function toggleModal() {
+    modal.classList.toggle("show-modal");
 }
 
-function closeModal() {
-  /* Get close button */
-  var closeButton = document.getElementsByClassName('jsModalClose');
-  var closeOverlay = document.getElementsByClassName('jsOverlay');
-
-  /* Set onclick event handler for close buttons */
-  for (var i = 0; i < closeButton.length; i++) {
-    closeButton[i].onclick = function () {
-      var modalWindow = this.parentNode.parentNode;
-
-      modalWindow.classList ? modalWindow.classList.remove('mopen') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'mopen'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
     }
-  }
-
-  /* Set onclick event handler for modal overlay */
-  for (var i = 0; i < closeOverlay.length; i++) {
-    closeOverlay[i].onclick = function () {
-      var modalWindow = this.parentNode;
-
-      modalWindow.classList ? modalWindow.classList.remove('mopen') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'mopen'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
-  }
-
 }
 
-/* Handling domready event IE9+ */
-function ready(fn) {
-  if (document.readyState != 'loading') {
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
 
-/* Triggering modal window function after dom ready */
-// ready(openModal);
-// ready(closeModal);
 
 var labels = document.getElementsByTagName('LABEL');
 
@@ -73,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       if (checked) {
         // shipping custom help
         var fieldtitle = 'Shipping';
-        var infotext = 'See our useful shipping your stuff guide <a id="ship-pop"  class="jsModalTrigger" href="#jsModal">here</a>'
+        var infotext = 'See our useful shipping your stuff guide <a id="ship-pop"  class="trigger" href="#jsModal">here</a>'
 
         for (var i = 0; i < labels.length; i++) {
           if (labels[i].textContent == fieldtitle) {
