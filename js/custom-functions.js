@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
             labels[i].insertAdjacentHTML('afterend', '<div id="ship-help" class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
           }
         }
-        openModal();
-        //  closeModal();
       } else {
         let node = document.getElementById("ship-help");
         if (node.parentNode) {
