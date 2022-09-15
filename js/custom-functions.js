@@ -1,20 +1,22 @@
 
 // modal
 
-function toggleModal() {
+
+
+window.onload = function () {
+
+  function toggleModal() {
     modal.classList.toggle("show-modal");
-}
+  }
 
-function windowOnClick(event) {
+  function windowOnClick(event) {
     if (event.target === modal) {
-        toggleModal();
+      toggleModal();
     }
-}
-
-window.onload = function() {
+  }
   var modal = document.querySelector(".modal");
   var trigger = document.querySelector(".trigger");
-  var closeButton = document.querySelector(".close-button");  
+  var closeButton = document.querySelector(".close-button");
 }
 
 
@@ -42,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           }
         }
         openModal();
-      //  closeModal();
+        //  closeModal();
       } else {
         let node = document.getElementById("ship-help");
         if (node.parentNode) {
@@ -97,14 +99,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let LocFieldtitle = 'Location';
     let infotextLoc = 'Add your postcode or town to show buyers where you are.';
 
-    if (labels) {
+    // if (labels) {
       for (var i = 0; i < labels.length; i++) {
         console.log('label-loop');
         if (labels[i].textContent == LocFieldtitle) {
           labels[i].insertAdjacentHTML('afterend', '<div class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotextLoc + '</p></div></div>');
         }
       }
-    }
+    // }
   }
 });
 
