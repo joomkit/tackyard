@@ -1,24 +1,30 @@
-
 // modal
-
-
-
+var trigger;
+var modal;
+var closeButton;
 // window.onload = function () {
 
-//   function toggleModal() {
-//     modal.classList.toggle("show-modal");
-//   }
-
-//   function windowOnClick(event) {
-//     if (event.target === modal) {
-//       toggleModal();
-//     }
-//   }
-//   var modal = document.querySelector(".modal");
-//   var trigger = document.querySelector(".trigger");
-//   var closeButton = document.querySelector(".close-button");
 // }
 
+function initModal(){
+   modal = document.querySelector(".modal");
+   trigger = document.querySelector(".trigger");
+   closeButton = document.querySelector(".close-button");
+}
+function initListeners(){
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+
+}
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
 
 var labels = document.getElementsByTagName('LABEL');
 
@@ -34,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
       const checked = document.querySelector('#shipping-checkbox:checked') !== null;
       console.log(checked); // false
       if (checked) {
+        // init modal button
+        initModal()
+        initListeners()
         // shipping custom help
         var fieldtitle = 'Shipping';
         var infotext = 'See our useful shipping your stuff guide <button id="ship-pop"  class="trigger" >here</button>'
