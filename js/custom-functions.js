@@ -1,24 +1,19 @@
-
-// modal
-var modal = document.querySelector(".modal");
-var trigger = document.querySelector(".trigger");
-var closeButton = document.querySelector(".close-button");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-
-
-
-// shipping info text
 document.addEventListener('DOMContentLoaded', function (event) {
+
+  // modal
+  var modal = document.querySelector(".modal");
+  var trigger = document.querySelector(".trigger");
+  var closeButton = document.querySelector(".close-button");
+
+  function toggleModal() {
+    modal.classList.toggle("show-modal");
+  }
+
+  function windowOnClick(event) {
+    if (event.target === modal) {
+      toggleModal();
+    }
+  }
 
   trigger.addEventListener("click", toggleModal);
   closeButton.addEventListener("click", toggleModal);
@@ -27,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   var labels = document.getElementsByTagName('LABEL');
 
   const container = document.querySelector('#sidewinder-wrapper');
-
+  // shipping info text
   // Click handler for entire DIV container
   container.addEventListener('click', function (e) {
     // But only alert for elements that have an alert-button class
@@ -46,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           }
         }
         openModal();
-      //  closeModal();
+        //  closeModal();
       } else {
         let node = document.getElementById("ship-help");
         if (node.parentNode) {
