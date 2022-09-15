@@ -20,10 +20,10 @@ window.onload = function () {
 }
 
 
+var labels = document.getElementsByTagName('LABEL');
 
 // shipping info text
 document.addEventListener('DOMContentLoaded', function (event) {
-  var labels = document.getElementsByTagName('LABEL');
   const container = document.querySelector('#sidewinder-wrapper');
 
   // Click handler for entire DIV container
