@@ -14,15 +14,17 @@ function windowOnClick(event) {
     }
 }
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
 
 
-var labels = document.getElementsByTagName('LABEL');
 
 // shipping info text
 document.addEventListener('DOMContentLoaded', function (event) {
+
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+
+  var labels = document.getElementsByTagName('LABEL');
 
   const container = document.querySelector('#sidewinder-wrapper');
 
