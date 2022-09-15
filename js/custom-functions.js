@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           }
         }
         openModal();
-        closeModal();
+      //  closeModal();
       } else {
         let node = document.getElementById("ship-help");
         if (node.parentNode) {
