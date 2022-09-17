@@ -132,8 +132,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 //inject update filter button at top
 
-
-const filterBtn = document.createElement("button");'<button type="submit">Apply filter</button>';
+const filterBtn = document.createElement("button");
 filterBtn.setAttribute('type', 'submit');
 filterBtn.textContent = 'Apply filter';
 const filterContainer = document.querySelector("#filters");
