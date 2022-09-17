@@ -21,7 +21,7 @@ function initListeners() {
   shipHelpBtn.addEventListener("click", toggleModal);
 }
 function toggleModal() {
-  modal.classList.toggle("show-modal");
+  modal.classList.toggle("pop-modal");
 }
 
 function windowOnClick(event) {
