@@ -8,7 +8,7 @@ var shipHelpBtn;
 // }
 
 function initModal() {
-  modal = document.querySelector(".modal");
+  modal = document.querySelector(".omodal");
   closeButton = document.querySelector(".close-button");
   trigger = document.querySelector(".trigger");
   shipHelpBtn = document.querySelector("#ship-help");
