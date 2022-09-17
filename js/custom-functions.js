@@ -46,9 +46,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
         var fieldtitle = 'Shipping';
         var infotext = 'See our useful shipping your stuff guide <button id="ship-pop"  class="trigger" >here</button>'
 
-        for (var i = 0; i < labels.length; i++) {
-          if (labels[i].textContent == fieldtitle) {
-            labels[i].insertAdjacentHTML('afterend', '<div id="ship-help" class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
+        var shiphelpEl = document.getElementById("ship-help");
+
+        if (!shiphelpEl) {
+          for (var i = 0; i < labels.length; i++) {
+            if (labels[i].textContent == fieldtitle) {
+              labels[i].insertAdjacentHTML('afterend', '<div id="ship-help" class="info-text-container"><div class="info-text-icon"><i class="ss-info"></i></div><div class="info-text-content"><p>' + infotext + '</p></div></div>');
+            }
           }
         }
         // init modal button
