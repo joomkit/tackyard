@@ -124,13 +124,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     // }
   }
-//inject update filter button at top
+//inject appl and reset filter button at top
 const filterContainer = document.querySelector("#filters");
 const filterBtn = document.createElement("button");
+
 filterBtn.setAttribute('type', 'submit');
+filterBtn.setAttribute('id', 'top-filter');
 filterBtn.textContent = 'Apply filter';
 
+const resetBtn = document.createElement("button");
+resetBtn.setAttribute('type', 'reset');
+resetBtn.setAttribute('id', 'reset-filter');
+resetBtn.textContent = 'Reset';
 filterContainer.prepend(filterBtn);
+filterContainer.prepend(resetBtn);
 
 });
 
