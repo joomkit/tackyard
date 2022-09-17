@@ -126,3 +126,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
   }
 });
 
+//inject close button for menu
+
+//<span class="close-button">&#10005;</span>
+
+//inject update filter button at top
+
+
+const filterBtn = document.createElement("button");'<button type="submit">Apply filter</button>';
+filterBtn.setAttribute('type', 'submit');
+filterBtn.textContent = 'Apply filter';
+const filterContainer = document.querySelector("#filters");
+
+filterContainer.prepend(filterBtn);
