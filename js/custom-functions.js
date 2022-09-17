@@ -124,17 +124,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     // }
   }
+//inject update filter button at top
+const filterContainer = document.querySelector("#filters");
+const filterBtn = document.createElement("button");
+filterBtn.setAttribute('type', 'submit');
+filterBtn.textContent = 'Apply filter';
+
+filterContainer.prepend(filterBtn);
+
 });
 
 //inject close button for menu
 
 //<span class="close-button">&#10005;</span>
 
-//inject update filter button at top
-
-const filterBtn = document.createElement("button");
-filterBtn.setAttribute('type', 'submit');
-filterBtn.textContent = 'Apply filter';
-const filterContainer = document.querySelector("#filters");
-
-filterContainer.prepend(filterBtn);
