@@ -124,24 +124,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     // }
   }
-//inject appl and reset filter button at top
-const filterContainer = document.querySelector("#filters");
-const filterBtn = document.createElement("button");
+  //inject appl and reset filter button at top
+  const filterContainer = document.querySelector("#filters");
+  const filterBtn = document.createElement("button");
 
-filterBtn.setAttribute('type', 'submit');
-filterBtn.setAttribute('id', 'top-filter');
-filterBtn.textContent = 'Apply filter';
+  filterBtn.setAttribute('type', 'submit');
+  filterBtn.setAttribute('id', 'top-filter');
+  filterBtn.textContent = 'Apply filter';
 
-const resetBtn = document.createElement("button");
-resetBtn.setAttribute('type', 'reset');
-resetBtn.setAttribute('id', 'reset-filter');
-resetBtn.textContent = 'Reset';
+  const resetBtn = document.createElement("button");
+  resetBtn.setAttribute('type', 'reset');
+  resetBtn.setAttribute('id', 'reset-filter');
+  resetBtn.textContent = 'Reset';
 
-filterContainer.prepend(resetBtn);
-filterContainer.prepend(filterBtn);
+  filterContainer.prepend(resetBtn);
+  filterContainer.prepend(filterBtn);
+
+  
+  resetBtn.addEventListener('click', function (e) {
+    const filterForm = document.querySelector("#homepage-filters");
+    filterForm.reset();
+  })
 });
 
 //inject close button for menu
 
 //<span class="close-button">&#10005;</span>
-
