@@ -2,20 +2,23 @@
 var trigger;
 var modal;
 var closeButton;
+var shipHelpBtn;
 // window.onload = function () {
 
 // }
 
 function initModal() {
   modal = document.querySelector(".modal");
-  trigger = document.querySelector(".trigger");
   closeButton = document.querySelector(".close-button");
+  trigger = document.querySelector(".trigger");
+  shipHelpBtn = document.querySelector("#ship-help");
+
 }
 function initListeners() {
-  trigger.addEventListener("click", toggleModal);
+  // trigger.addEventListener("click", toggleModal);
   closeButton.addEventListener("click", toggleModal);
   window.addEventListener("click", windowOnClick);
-
+  shipHelpBtn.addEventListener("click", toggleModal);
 }
 function toggleModal() {
   modal.classList.toggle("show-modal");
