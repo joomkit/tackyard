@@ -136,9 +136,9 @@ const resetBtn = document.createElement("button");
 resetBtn.setAttribute('type', 'reset');
 resetBtn.setAttribute('id', 'reset-filter');
 resetBtn.textContent = 'Reset';
-filterContainer.prepend(filterBtn);
-filterContainer.prepend(resetBtn);
 
+filterContainer.prepend(resetBtn);
+filterContainer.prepend(filterBtn);
 });
 
 //inject close button for menu
