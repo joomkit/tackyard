@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }
 
     }
+  
   });
 });
 
@@ -142,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   
   resetBtn.addEventListener('click', function (e) {
+    console.log('reset click')
     const filterForm = document.querySelector("#homepage-filters");
     filterForm.reset();
   })
