@@ -141,11 +141,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
   filterContainer.prepend(resetBtn);
   filterContainer.prepend(filterBtn);
 
+  const thisForm = document.getElementById('homepage-filters');
+
   
   resetBtn.addEventListener('click', function (e) {
-    console.log('reset click')
-    document.getElementById("homepage-filters").reset();
-
+    console.log('reset click');
+    thisForm.reset();
   })
 });
 
