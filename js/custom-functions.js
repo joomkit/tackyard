@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         // }
         // console.log('FIN reset click on form listener');
 
-       // window.location = 'https://app.tackyard.co.uk'
+        window.location = 'https://app.tackyard.co.uk'
 
       }
     });
