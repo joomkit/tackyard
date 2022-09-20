@@ -163,7 +163,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
       // })
       console.log('reset click on form listener');
       // thisForm.reset();
-      resetFormy();
+      document.getElementById('homepage-filters').reset();
+      document.querySelector('input').checked = false;
+      // resetFormy();
       
     }
   });
