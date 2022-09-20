@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       //   resetFormy();
       // })
       console.log('reset click on form listener');
+      thisForm.reset();
     }
   });
 
