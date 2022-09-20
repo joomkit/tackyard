@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       // document.querySelector('input[type=checkbox]').checked = false;
       var inputs = document.querySelectorAll("input[type='checkbox']");
       for (var i = 0; i < inputs.length; i++) {
-        inputs[i].checked = false;
+        if (inputs[i].checked = true) inputs[i].checked = false;
       }
       // resetFormy();
 
