@@ -146,7 +146,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
   
   resetBtn.addEventListener('click', function (e) {
     console.log('reset click');
-    thisForm.reset();
+    //thisForm.reset();
+    resetFormy();
   })
 });
 
