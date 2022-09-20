@@ -163,13 +163,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
       // })
       console.log('reset click on form listener');
       // thisForm.reset();
-      document.getElementById('homepage-filters').reset();
-      document.querySelector('input[type=checkbox]').checked = false;
+      // document.getElementById('homepage-filters').reset();
+      // document.querySelector('input[type=checkbox]').checked = false;
+      var inputs = document.querySelectorAll("input[type='checkbox']");
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+      }
       // resetFormy();
-      
+
     }
   });
 
-  
+
 
 });
