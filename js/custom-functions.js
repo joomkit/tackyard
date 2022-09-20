@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       for (var i = 0; i < inputs.length; i++) {
         if (inputs[i].checked = true) inputs[i].checked = false;
       }
+      console.log('FIN reset click on form listener');
       // resetFormy();
 
     }
