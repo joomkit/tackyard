@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       console.log('reset click on form listener');
       // thisForm.reset();
       document.getElementById('homepage-filters').reset();
-      document.querySelector('input').checked = false;
+      document.querySelector('input[type=checkbox]').checked = false;
       // resetFormy();
       
     }
