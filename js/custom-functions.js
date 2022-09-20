@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       }
 
     }
-  
+
   });
 });
 
@@ -125,6 +125,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     // }
   }
+
+});
+
+//inject close button for menu
+
+//<span class="close-button">&#10005;</span>
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  const thisForm = document.getElementById('homepage-filters');
+
   //inject appl and reset filter button at top
   const filterContainer = document.querySelector("#filters");
   const filterBtn = document.createElement("button");
@@ -136,21 +146,25 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const resetBtn = document.createElement("button");
   resetBtn.setAttribute('type', 'reset');
   resetBtn.setAttribute('id', 'reset-filter');
+  resetBtn.setAttribute('class', 'reset-filter-form');
   resetBtn.textContent = 'Reset';
 
   filterContainer.prepend(resetBtn);
   filterContainer.prepend(filterBtn);
 
-  const thisForm = document.getElementById('homepage-filters');
+  // Click handler for entire DIV container
+  thisForm.addEventListener('click', function (e) {
+    //
+    if (e.target.classList.contains('reset-filter-form')) {
+      // resetBtn.addEventListener('click', function (e) {
+      //   console.log('reset click');
+      //   //thisForm.reset();
+      //   resetFormy();
+      // })
+      console.log('reset click on form listener');
+    }
+  });
 
-  
-  resetBtn.addEventListener('click', function (e) {
-    console.log('reset click');
-    //thisForm.reset();
-    resetFormy();
-  })
+
+
 });
-
-//inject close button for menu
-
-//<span class="close-button">&#10005;</span>
