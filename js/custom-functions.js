@@ -163,7 +163,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
       // })
       console.log('reset click on form listener');
       // thisForm.reset();
-      document.querySelector('input[name^="filter_option"]').checked = false;
+      resetFormy();
+      
     }
   });
 
