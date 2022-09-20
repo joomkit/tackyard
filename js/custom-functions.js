@@ -135,46 +135,46 @@ document.addEventListener('DOMContentLoaded', function (event) {
 document.addEventListener('DOMContentLoaded', function (event) {
   const thisForm = document.getElementById('homepage-filters');
 
-  //inject appl and reset filter button at top
-  const filterContainer = document.querySelector("#filters");
-  const filterBtn = document.createElement("button");
+  if (thisForm) {
 
-  filterBtn.setAttribute('type', 'submit');
-  filterBtn.setAttribute('id', 'top-filter');
-  filterBtn.textContent = 'Apply filter';
+    //inject appl and reset filter button at top
+    const filterContainer = document.querySelector("#filters");
+    const filterBtn = document.createElement("button");
 
-  const resetBtn = document.createElement("button");
-  resetBtn.setAttribute('type', 'reset');
-  resetBtn.setAttribute('id', 'reset-filter');
-  resetBtn.setAttribute('class', 'reset-filter-form');
-  resetBtn.textContent = 'Reset';
+    filterBtn.setAttribute('type', 'submit');
+    filterBtn.setAttribute('id', 'top-filter');
+    filterBtn.textContent = 'Apply filter';
 
-  filterContainer.prepend(resetBtn);
-  filterContainer.prepend(filterBtn);
+    const resetBtn = document.createElement("button");
+    resetBtn.setAttribute('type', 'reset');
+    resetBtn.setAttribute('id', 'reset-filter');
+    resetBtn.setAttribute('class', 'reset-filter-form');
+    resetBtn.textContent = 'Reset';
 
-  // Click handler for entire DIV container
-  thisForm.addEventListener('click', function (e) {
-    //
-    if (e.target.classList.contains('reset-filter-form')) {
-      // resetBtn.addEventListener('click', function (e) {
-      //   console.log('reset click');
-      //   //thisForm.reset();
-      //   resetFormy();
-      // })
-      console.log('reset click on form listener');
-      // thisForm.reset();
-      // document.getElementById('homepage-filters').reset();
-      // document.querySelector('input[type=checkbox]').checked = false;
-      var inputs = document.querySelectorAll("input[type='checkbox']");
-      for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].checked = true) inputs[i].checked = false;
+    filterContainer.prepend(resetBtn);
+    filterContainer.prepend(filterBtn);
+
+    // Click handler for entire DIV container
+    thisForm.addEventListener('click', function (e) {
+      //
+      if (e.target.classList.contains('reset-filter-form')) {
+        // resetBtn.addEventListener('click', function (e) {
+        //   console.log('reset click');
+        //   //thisForm.reset();
+        //   resetFormy();
+        // })
+        // thisForm.reset();
+        // document.getElementById('homepage-filters').reset();
+        // document.querySelector('input[type=checkbox]').checked = false;
+        // var inputs = document.querySelectorAll("input[type='checkbox']");
+        // for (var i = 0; i < inputs.length; i++) {
+        //   if (inputs[i].checked = true) inputs[i].checked = false;
+        // }
+        // console.log('FIN reset click on form listener');
+
+        window.location = 'https://app.tackyard.co.uk'
+
       }
-      console.log('FIN reset click on form listener');
-      // resetFormy();
-
-    }
-  });
-
-
-
+    });
+  }
 });
