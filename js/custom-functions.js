@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // Click handler for entire DIV container
   container.addEventListener('click', function (e) {
     // But only alert for elements that have an alert-button class
-    e.preventDefault()
+   
     if (e.target.classList.contains('delivery-method-checkbox')) {
-
+      e.preventDefault()
       const checked = document.querySelector('#shipping-checkbox:checked') !== null;
       console.log(checked); // false
       if (checked) {
