@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 // get profile link
 var profileLink = document.querySelector('.Avatar__link__RlpRO');
 var profileLinkBtn = document.querySelector('#profileLinkBtn');
-profileLinkBtn.setAttribute('href', profileLink.href)
+profileLinkBtn.href = profileLink.href;
 
   // formfilter style classes
   const thisForm = document.getElementById('homepage-filters');
