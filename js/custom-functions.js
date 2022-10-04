@@ -143,11 +143,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
   var logo = document.querySelector('.Logo');
   logo.setAttribute('href', 'https://tackyard.co.uk')
 
-// get profile link
-var profileLink = document.querySelector('.Avatar__link__RlpRO');
-var profileLinkBtn = document.querySelector('#profileLinkBtn');
-profileLinkBtn.setAttribute('href', profileLink.href)
-
   // formfilter style classes
   const thisForm = document.getElementById('homepage-filters');
 
