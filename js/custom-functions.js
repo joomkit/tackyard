@@ -143,10 +143,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
   var logo = document.querySelector('.Logo');
   logo.setAttribute('href', 'https://tackyard.co.uk')
 
-// // get profile link
-// var profileLink = document.querySelector('.Avatar__link__RlpRO');
-// var profileLinkBtn = document.querySelector('#profileLinkBtn');
-// profileLinkBtn.href = profileLink.href;
+// get profile link
+var profileLink = document.querySelector('.Avatar__link__RlpRO');
+var profileLinkBtn = document.querySelector('#profileLinkBtn');
+profileLinkBtn.href = profileLink.href;
+
+// get inbox link
+var inboxLink = document.querySelector('.ProfileDropdown__profileAction__1H9nm');
+var inboxBtn = document.querySelector('#inboxBtn');
+inboxBtn.href = inboxLink.href;
+
+// search icon button trigger
+
+var searchIconBtn = document.querySelector('#searchIconBtn');
+var searchIconBar = document.querySelector('.SearchBar__mobileToggle__3pjye');
+searchIconBtn.addEventListener('click', function(e) {
+  if (searchIconBar.classList.contains('d-flex')) {
+    searchIconBar.classList.remove('d-flex');
+} else {
+  searchIconBar.classList.add('d-flex');
+}
+});
 
   // formfilter style classes
   const thisForm = document.getElementById('homepage-filters');
