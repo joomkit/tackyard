@@ -129,11 +129,23 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 });
 
-//inject close button for menu
+
+
+
+
+//close button for menu
 
 //<span class="close-button">&#10005;</span>
 
 document.addEventListener('DOMContentLoaded', function (event) {
+
+  // chnage logo url
+  var logo = document.querySelector('.Logo');
+  logo.setAttribute('href', 'https://tackyard.co.uk')
+
+
+
+  // formfilter style classes
   const thisForm = document.getElementById('homepage-filters');
 
   if (thisForm) {
