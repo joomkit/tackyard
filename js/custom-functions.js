@@ -4,7 +4,7 @@ var modal;
 var closeButton;
 var shipHelpBtn;
 
-var appUrl = 'https://tackyard.co.uk';
+var appUrl = 'https://app.tackyard.co.uk';
 // window.onload = function () {
 
 // }
