@@ -3,6 +3,8 @@ var trigger;
 var modal;
 var closeButton;
 var shipHelpBtn;
+
+var appUrl = 'https://tackyard.co.uk';
 // window.onload = function () {
 
 // }
@@ -146,12 +148,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 // get profile link
 var profileLink = document.querySelector('.Avatar__link__RlpRO');
 var profileLinkBtn = document.querySelector('#profileLinkBtn');
-profileLinkBtn.href = profileLink.href;
+profileLinkBtn.href = profileLink ? profileLink.href : appUrl + 'en/login';
 
 // get inbox link
 var inboxLink = document.querySelector('.ProfileDropdown__profileAction__1H9nm');
 var inboxBtn = document.querySelector('#inboxBtn');
-inboxBtn.href = inboxLink.href;
+inboxBtn.href = inboxLink ? inboxLink.href : appUrl + 'en/login';
 
 // search icon button trigger
 
