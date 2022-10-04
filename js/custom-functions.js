@@ -156,7 +156,7 @@ inboxBtn.href = inboxLink.href;
 // search icon button trigger
 
 var searchIconBtn = document.querySelector('#searchIconBtn');
-var searchIconBar = document.querySelector('.SearchBar__mobileToggle__3pjye');
+var searchIconBar = document.querySelector('.SearchBar__form__27PQI');
 searchIconBtn.addEventListener('click', function(e) {
   if (searchIconBar.classList.contains('d-flex')) {
     searchIconBar.classList.remove('d-flex');
