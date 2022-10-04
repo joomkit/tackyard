@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 // get profile link
 var profileLink = document.querySelector('.Avatar__link__RlpRO');
 var profileLinkBtn = document.querySelector('#profileLinkBtn');
-profileLinkBtn.href = profileLink ? profileLink.href : appUrl + 'en/login';
+profileLinkBtn.href = profileLink ? profileLink.href : appUrl + '/en/login';
 
 // get inbox link
 var inboxLink = document.querySelector('.ProfileDropdown__profileAction__1H9nm');
 var inboxBtn = document.querySelector('#inboxBtn');
-inboxBtn.href = inboxLink ? inboxLink.href : appUrl + 'en/login';
+inboxBtn.href = inboxLink ? inboxLink.href : appUrl + '/en/login';
 
 // search icon button trigger
 
