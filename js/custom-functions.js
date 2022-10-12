@@ -141,9 +141,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 document.addEventListener('DOMContentLoaded', function (event) {
 
-  // chnage logo url
-  var logo = document.querySelector('.Logo');
-  logo.setAttribute('href', 'https://tackyard.co.uk')
+  // change logo url to remove mobile confusion
+  //var logo = document.querySelector('.Logo');
+  // logo.setAttribute('href', 'https://tackyard.co.uk')
 
 // get profile link
 var profileLink = document.querySelector('.Avatar__link__RlpRO');
